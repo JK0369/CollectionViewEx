@@ -14,6 +14,8 @@
 		E09E469C26A4323700000610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09E469B26A4323700000610 /* Assets.xcassets */; };
 		E09E469F26A4323700000610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09E469D26A4323700000610 /* LaunchScreen.storyboard */; };
 		E09E46A926A4325700000610 /* MyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09E46A826A4325700000610 /* MyLayout.swift */; };
+		E09E46AF26A46B3700000610 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09E46AE26A46B3700000610 /* MyModel.swift */; };
+		E09E46B326A46BA400000610 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09E46B226A46BA400000610 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E09E469E26A4323700000610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E09E46A026A4323700000610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E09E46A826A4325700000610 /* MyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLayout.swift; sourceTree = "<group>"; };
+		E09E46AE26A46B3700000610 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		E09E46B226A46BA400000610 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		E09E469126A4323500000610 /* CollectionViewEx */ = {
 			isa = PBXGroup;
 			children = (
+				E09E46B126A46B7300000610 /* Views */,
+				E09E46AD26A46B2B00000610 /* Models */,
 				E09E46A626A4324100000610 /* CollectionView */,
 				E09E469226A4323500000610 /* AppDelegate.swift */,
 				E09E469426A4323500000610 /* SceneDelegate.swift */,
@@ -76,6 +82,22 @@
 				E09E46A826A4325700000610 /* MyLayout.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E09E46AD26A46B2B00000610 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E09E46AE26A46B3700000610 /* MyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E09E46B126A46B7300000610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E09E46B226A46BA400000610 /* MyCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,8 @@
 			files = (
 				E09E469726A4323500000610 /* ViewController.swift in Sources */,
 				E09E46A926A4325700000610 /* MyLayout.swift in Sources */,
+				E09E46AF26A46B3700000610 /* MyModel.swift in Sources */,
+				E09E46B326A46BA400000610 /* MyCell.swift in Sources */,
 				E09E469326A4323500000610 /* AppDelegate.swift in Sources */,
 				E09E469526A4323500000610 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol MyLayoutDelegate: AnyObject {
+protocol MyCollectionViewLayoutDelegate: AnyObject {
     func collectionView(_ collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath) -> CGFloat
 }
 
 class MyLayout: UICollectionViewLayout {
-    weak var delegate: MyLayoutDelegate?
+    weak var delegate: MyCollectionViewLayoutDelegate?
 
     fileprivate var numberOfColumns: Int = 2
     fileprivate var cellPadding: CGFloat = 6.0
@@ -73,13 +73,11 @@ class MyLayout: UICollectionViewLayout {
 
     // rect에 따른 layoutAttributes를 얻는 메서드 재정의
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        super.layoutAttributesForElements(in: rect)
-
         var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
 
-        cache.forEach { attributes in
+        for attributes in cache {
             if attributes.frame.intersects(rect) {
-                visibleLayoutAttributes += [attributes]
+                visibleLayoutAttributes.append(attributes)
             }
         }
         return visibleLayoutAttributes
@@ -89,4 +87,5 @@ class MyLayout: UICollectionViewLayout {
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cache[indexPath.item]
     }
+
 }
