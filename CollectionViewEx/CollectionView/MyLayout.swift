@@ -73,14 +73,7 @@ class MyLayout: UICollectionViewLayout {
 
     // rect에 따른 layoutAttributes를 얻는 메서드 재정의
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-
-        for attributes in cache {
-            if attributes.frame.intersects(rect) {
-                visibleLayoutAttributes.append(attributes)
-            }
-        }
-        return visibleLayoutAttributes
+        return cache.filter { rect.intersects($0.frame) }
     }
 
     // indexPath에 따른 layoutAttribute를 얻는 메서드 재정의
