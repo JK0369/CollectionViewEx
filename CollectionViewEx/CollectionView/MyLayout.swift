@@ -34,9 +34,8 @@ class MyLayout: UICollectionViewLayout {
     // 바로 다음에 위치할 cell의 위치를 구하기 위해서 xOffset, yOffset 계산
     override func prepare() {
         super.prepare()
-
-        // cache에 이미 layout 정보가 있으면 그것 그대로 사용, 없으면 layout 다시 계산
-        guard cache.isEmpty, let collectionView = collectionView else { return }
+        guard let collectionView = collectionView else { return }
+        cache.removeAll()
 
         // xOffset 계산
         let columnWidth: CGFloat = contentWidth / CGFloat(numberOfColumns)
